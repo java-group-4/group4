@@ -4,6 +4,10 @@ package problem2;
 import java.util.*;
 import java.io.*;
 import java.lang.*;
+/**
+ * @author vikash kumawat
+ *
+ */
 public class Problem2 {
 
 	public static void main(String[] args) {
