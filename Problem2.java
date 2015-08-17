@@ -1,26 +1,19 @@
-import java.lang.*;
+package problem2;
+
+
 import java.util.*;
 import java.io.*;
+import java.lang.*;
 public class Problem2 {
 
 	public static void main(String[] args) {
-		//MyThread thrd=new MyThread();
-		//thrd.start();
 		Chat newChat=new Chat();
 		new T1(newChat);
 		new T2(newChat);
-		
-		
+				
 	}
 
 }
-/*class MyThread extends Thread{
-	 public void run()
-	{
-		//System.out.println("hello");
-		chat 
-	}
-}*/
 
 
  class Chat {
@@ -63,7 +56,6 @@ public class Problem2 {
 
  class T1 implements Runnable {
 	Chat m;
-	//String[] s1 = {"Hi", "How are you ?", "I am also doing fine!"};
 	
 	public T1 (Chat m1){
 		
@@ -73,16 +65,12 @@ public class Problem2 {
 	}
 
 	public void run() {
-		/*for (int i = 0; i < s1.length; i++) {
-			m.Question(s1[i]);
-		}*/
 		 
 		try(BufferedReader br= new BufferedReader(new FileReader("C:\\Users\\vikash.kumawat\\workspace\\13AugThread\\src\\p022_names1.txt")))  {
 		    String line1;
 		    while ((line1 = br.readLine()) != null) {
 		       m.Question(line1);
-		    	//System.out.println(line);
-		    }
+		    	}
 		    br.close();
 		    
 		}catch(FileNotFoundException exception){
